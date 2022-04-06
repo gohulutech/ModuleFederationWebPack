@@ -8,14 +8,9 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "products",
+      name: "container",
       remotes: {
         products: "products@http://localhost:8081/remoteEntry.js",
-      },
-    }),
-    new ModuleFederationPlugin({
-      name: "cart",
-      remotes: {
         cart: "cart@http://localhost:8082/remoteEntry.js",
       },
     }),
